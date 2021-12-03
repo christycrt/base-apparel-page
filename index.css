@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+    --border-input: hsl(0, 36%, 70%, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    padding: 2rem 2rem;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+    color: var(--desaturated-red);
+    line-height: 1.2;
+}
+
+.logo {
+    width: 7rem;
+}
+
+.hero-mobile {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    padding: 4rem 2rem 1rem 2rem;
+}
+
+.we-are {
+    color: var(--desaturated-red);
+    font-weight: 300;
+    font-size: 2.7rem;
+    letter-spacing: 10px;
+    margin-bottom: 1rem;
+}
+
+.coming {
+    color: var(--dark-grayish-red);
+    font-size: 2.7rem;
+    font-weight: 600 !important;
+}
+
+input {
+    border: 1px solid var(--border-input);
+    color: var(--soft-red);
+    padding: 0 1.5rem;
+    height: 50px;
+    border-radius: 35px;
+    width: 100%;
+}
+
+input::placeholder {
+    color: var(--desaturated-red);
+    opacity: 0.7;
+}
+
+input:focus {
+    color: var(--soft-red);
+    outline: none;
+    border: 1px solid var(--desaturated-red);
+}
+
+.input-wrapper {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.arrow-button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    height: 50px;
+    width: 70px;
+    border: none;
+    border-radius: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 30px var(--desaturated-red);
+}
+
+.icon-error {
+    display: none;
+    position: absolute;
+    right: 80px;
+    top: 13px;
+}
+
+.error {
+    display: none;
+    text-align: left;
+    color: var(--soft-red);
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.hero-desktop {
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    font-size: 11px;
+    color: hsl(0, 93%, 68%);
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-image: url("images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    nav {
+        padding: 4rem 9rem;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    p {
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .logo {
+        width: 10rem;
+    }
+
+    .we-are {
+        font-size: 4rem;
+        letter-spacing: 15px;
+    }
+
+    .coming {
+        font-size: 4rem;
+    }
+
+    .content {
+        width: 45%;
+        padding-left: 9rem;
+    }
+
+    input {
+        height: 55px;
+    }
+
+    .arrow-button {
+        height: 55px;
+        width: 95px;
+    }
+
+    .hero-mobile {
+        display: none;
+    }
+
+    .hero-desktop {
+        display: block;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .icon-error {
+        display: none;
+        position: absolute;
+        right: 110px;
+        top: 15px;
+    }
+
+    .attribution {
+        text-align: left;
+    }
+
+    footer {
+        padding-left: 9rem;
+        margin-top: 2rem;
+    }
+
+}
